@@ -1,0 +1,91 @@
+#######################################################################################
+#                                                                                     #
+#  |  ____\ \ / /__   __|  __ \     /\   |  __ \     /\   | \ | | |/ / |  | |  __ \   #
+#  | |__   \ V /   | |  | |__) |   /  \  | |__) |   /  \  |  \| | ' /| |  | | |__) |  #
+#  |  __|   > <    | |  |  _  /   / /\ \ |  _  /   / /\ \ | . ` |  < | |  | |  ___/   #
+#  | |____ / . \   | |  | | \ \  / ____ \| | \ \  / ____ \| |\  | . \| |__| | |       #
+#  |______/_/ \_\  |_|  |_|  \_\/_/    \_\_|  \_\/_/    \_\_| \_|_|\_\\____/|_|       #
+#                                                                                     #
+#######################################################################################
+
+ranks:
+  ferro4:
+    tag: "&7[&bFerro 4&7]&f"
+    cost: 0
+    nextRank: "ferro3"
+    default: true
+    material: PLAYER_HEAD
+    slot: 20
+    lore:
+      - ""
+      - "&fRank: @rank"
+      - "&fPreço para subir de Rank: &6@cost"
+      - ""
+  ferro3:
+    tag: "&7[&bFerro 3&7]&f"
+    cost: 2000
+    nextRank: "ferro2"
+    material: PLAYER_HEAD
+    slot: 21
+    lore:
+      - ""
+      - "&fRank: @rank"
+      - "&fPreço para subir de Rank: &6@cost"
+      - ""
+  ferro2:
+    tag: "&7[&bFerro 2&7]&f"
+    cost: 4000
+    nextRank: "ferro1"
+    material: PLAYER_HEAD
+    slot: 22
+    lore:
+      - ""
+      - "&fRank: @rank"
+      - "&fPreço para subir de Rank: &6@cost"
+      - ""
+  ferro1:
+    tag: "&7[&bFerro 1&7]&f"
+    cost: 4000
+    nextRank: "bronze4"
+    material: PLAYER_HEAD
+    slot: 23
+    lore:
+      - ""
+      - "&fRank: @rank"
+      - "&fPreço para subir de Rank: &6@cost"
+      - ""
+  bronze4:
+    tag: "&7[&bBronze 4&7]&f"
+    cost: 8000
+    nextRank: "bronze3"
+    material: PLAYER_HEAD
+    slot: 24
+    lore:
+      - ""
+      - "&fRank: @rank"
+      - "&fPreço para subir de Rank: &6@cost"
+      - ""
+  mestre2:
+    tag: "&7[&6Mestre4&7]&f"
+    cost: 10000000
+    nextRank: "bronze3"
+    material: PLAYER_HEAD
+    slot: 24
+    lore:
+      - ""
+      - "&fRank: @rank"
+      - "&fPreço para subir de Rank: &6@cost"
+      - ""
+  mestre:
+    tag: "&7[&6&lMestre&7]&f"
+    cost: 90000000
+    nextRank: null
+    material: PLAYER_HEAD
+    slot: 24
+    lore:
+      - ""
+      - "&fRank: @rank"
+      - "&fPreço para subir de Rank: &6@cost"
+      - ""
+      - "&cUltimo rank"
+      - ""

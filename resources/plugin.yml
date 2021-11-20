@@ -1,0 +1,10 @@
+name: eRankup
+version: '${project.version}'
+main: me.extraplays.erankup.eRankup
+api-version: 1.17
+authors: [ ExtraPlays ]
+description: RankUp plugin
+softdepend: [PlaceholderAPI]
+commands:
+  rankup:
+    description: Open Rankup Menu

@@ -1,0 +1,31 @@
+#######################################################################################
+#                                                                                     #
+#  |  ____\ \ / /__   __|  __ \     /\   |  __ \     /\   | \ | | |/ / |  | |  __ \   #
+#  | |__   \ V /   | |  | |__) |   /  \  | |__) |   /  \  |  \| | ' /| |  | | |__) |  #
+#  |  __|   > <    | |  |  _  /   / /\ \ |  _  /   / /\ \ | . ` |  < | |  | |  ___/   #
+#  | |____ / . \   | |  | | \ \  / ____ \| | \ \  / ____ \| |\  | . \| |__| | |       #
+#  |______/_/ \_\  |_|  |_|  \_\/_/    \_\_|  \_\/_/    \_\_| \_|_|\_\\____/|_|       #
+#                                                                                     #
+#######################################################################################
+
+# Placeholders:
+#
+# %erankup_rank% show player rank
+# %erankup_next_rank% show player next rank
+# %erankup_next_rank_cost% show player next rank
+
+menu:
+  active: true
+  name: "&6Menu Rankup"
+  rows: 3
+
+# Announce when player RankUp
+announce_when_rankup:
+  active: true
+  message: "@player avançou para o Rank @rank"
+
+# Effects when player RankUP
+effects:
+  thunder: true
+  bat: true
+
