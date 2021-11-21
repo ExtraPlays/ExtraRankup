@@ -37,18 +37,8 @@ public class RankupCommand implements CommandExecutor {
 
             FileConfiguration config = eRankup.getConfig();
             FileConfiguration ranksConfig = eRankup.ranks.config();
-
-
             Rank actual = manager.getRank(p);
             Rank next = manager.getNextRank(p);
-
-            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "Rank Atual: " + PlaceholderAPI.setPlaceholders(p, "%eRankup_rank%")));
-            if (next == null) {
-                p.sendMessage(ChatColor.translateAlternateColorCodes('&', "Proximo Rank: Nenhum"));
-            }else {
-                p.sendMessage(ChatColor.translateAlternateColorCodes('&', "Proximo Rank: " + PlaceholderAPI.setPlaceholders(p, "%eRankup_next_rank%")));
-                p.sendMessage(ChatColor.translateAlternateColorCodes('&', "Preço: " + PlaceholderAPI.setPlaceholders(p, "%eRankup_next_rank_cost%")));
-            }
 
             MenuGui gui = new MenuGui(config.getString("menu.name").replace("&", "§"), (9 * config.getInt("menu.rows") ));
 
@@ -74,8 +64,6 @@ public class RankupCommand implements CommandExecutor {
                 }
 
                 meta.setLore(lore);
-
-
                 it.setItemMeta(meta);
 
                 gui.setItem(it, ranksConfig.getInt(path + ".slot"));

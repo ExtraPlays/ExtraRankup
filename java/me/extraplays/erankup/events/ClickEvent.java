@@ -40,13 +40,24 @@ public class ClickEvent implements Listener {
             if (!e.getCurrentItem().getItemMeta().getDisplayName().equals(manager.getNextRank(p).getPrefix().replace("&", "§"))){
                 p.sendMessage("Você não pode upar pra esse rank");
                 p.closeInventory();
+                e.setCancelled(true);
             }else {
-                manager.Rankup(p);
-                p.closeInventory();
 
-                p.sendMessage("Você foi para o Rank  " + manager.getRank(p).getPrefix().replace("&", "§"));
+                if (eRankup.econ.getBalance(p) >= manager.getNextRank(p).getCost()){
+
+                    eRankup.econ.withdrawPlayer(p, manager.getNextRank(p).getCost());
+
+                    manager.Rankup(p);
+                    p.closeInventory();
+                    p.sendMessage("Você foi para o Rank  " + manager.getRank(p).getPrefix().replace("&", "§"));
+                }else {
+                    p.sendMessage("Dinheiro insuficiente");
+                    e.setCancelled(true);
+                    p.closeInventory();
+                }
 
                 e.setCancelled(true);
+
             }
 
         }

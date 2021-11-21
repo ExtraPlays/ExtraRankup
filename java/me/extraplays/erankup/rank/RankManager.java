@@ -79,6 +79,31 @@ public class RankManager {
 //            Entity bat = p.getLocation().getWorld().spawnEntity(p.getLocation(), EntityType.BAT);
 //        }
 
+        if (eRankup.getConfig().getBoolean("announce_when_rankup.active")){
+            for (String s : eRankup.getConfig().getStringList("announce_when_rankup.message")){
+
+                Bukkit.getServer().broadcastMessage(s.replace("@rank", rank.getPrefix()).replace("@player", p.getDisplayName()).replace("&", "§"));
+
+            }
+        }
+
+    }
+
+    public void setRank(Player p, Rank rank){
+        playerRank.put(p.getUniqueId(), rank);
+    }
+
+    public Rank getRankByName(String rankName){
+
+        Rank rank = null;
+
+        for (Rank r : ranks){
+            if (r.getName().equals(rankName)) {
+                rank = r;
+            }
+        }
+
+        return rank;
     }
 
     public Rank getRank(Player p){

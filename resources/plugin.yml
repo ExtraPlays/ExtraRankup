@@ -8,3 +8,5 @@ softdepend: [PlaceholderAPI]
 commands:
   rankup:
     description: Open Rankup Menu
+  erankup:
+    description: admin commands for ExtraRankup

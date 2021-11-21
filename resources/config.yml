@@ -17,12 +17,15 @@
 menu:
   active: true
   name: "&6Menu Rankup"
-  rows: 3
+  rows: 5
 
 # Announce when player RankUp
 announce_when_rankup:
   active: true
-  message: "@player avançou para o Rank @rank"
+  message:
+    - ""
+    - "&6@player &7foi para o Rank &6@rank"
+    - ""
 
 # Effects when player RankUP
 effects:
